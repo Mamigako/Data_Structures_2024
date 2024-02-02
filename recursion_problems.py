@@ -1,16 +1,31 @@
 
 def modulus(a, b):  # ONLY NEEDS TO WORK FOR POSITIVE INTEGERS
-    #TODO: remove 'pass' and implement functionality
-    pass
+    """Subtracting b from a and if the result is 0, a mod b is 0. 
+    If it goes below 0, a mod b is the previous result of a - b."""
+    
+    #Base step.
+    if a - b == 0:
+        return a - b
+    
+    elif a - b < 0:
+        return a
 
+    #Recursive step.
+    return modulus((a-b), b)        
 
 def how_many(lis1, lis2):
-    #TODO: remove 'pass' and implement functionality
-    pass
+    """Checking lis1 first element membership in lis2 and incrementing by slicing lis1 to
+    check all off its elements against lis2, returning 1 for each hit."""
 
-
-# FEEL FREE TO EDIT THE TESTS AND MAKE THEM BETTER
-# REMEMBER EDGE CASES!
+    #Base step.
+    if len(lis1) == 0:
+        return 0
+    
+    #Recursive step.
+    if lis1[0] in lis2:
+        return 1 + how_many(lis1[1:], lis2)
+    else:
+        return how_many(lis1[1:], lis2)
 
 def test_modulus(num1, num2):
     print("The modulus of " + str(num1) + " and " + str(num2) + " is " + str(modulus(num1, num2)))
@@ -30,7 +45,7 @@ def run_recursion_program():
     test_modulus(0, 7)
     test_modulus(15, 5)
     test_modulus(128, 16)
-    test_modulus(128, 15)
+    test_modulus(128, 15) 
 
     print("\nTESTING HOW MANY:\n")
 
