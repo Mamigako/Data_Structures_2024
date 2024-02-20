@@ -32,9 +32,6 @@ def reverse_list(head):
         
     return node
 
-def palindrome(head):
-    return True
-
 if __name__ == "__main__":
     ##
     
@@ -101,38 +98,3 @@ if __name__ == "__main__":
     print_to_screen(head)
     rev_head = reverse_list(head)
     print_to_screen(rev_head)
-
-
-
-    """ 
-    ##
-    print("PALINDROME TESTS")
-    print("\n")
-    head = Node("A", Node("E", Node("L", Node("E", Node("A", None)))))
-    print_to_screen(head)
-    print(palindrome(head))
-    print_to_screen(head)
-
-    print("\n")
-
-    head = Node("A", Node("E", Node("L", Node("B", Node("A", None)))))
-    print_to_screen(head)
-    print(palindrome(head))
-    print_to_screen(head)
-
-    print("\n")
-
-    head = Node("C", Node("A", Node("L", Node("L", Node("A", Node("C", None))))))
-    print_to_screen(head)
-    print(palindrome(head))
-    print_to_screen(head)
-
-    print("\n")
-
-    head = Node("C", Node("A", Node("L", Node("T", Node("E", Node("C", None))))))
-    print_to_screen(head)
-    print(palindrome(head))
-    print_to_screen(head)
-
-    print("\n")
-    """
